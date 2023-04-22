@@ -12,7 +12,7 @@ TagManager:
   - Water
   - UI
   - InvisibleColliders
-  - 
+  - Interactive
   - 
   - 
   - 
@@ -50,9 +50,12 @@ TagManager:
   - name: Walls
     uniqueID: 1038024421
     locked: 0
-  - name: Character
+  - name: Inside
     uniqueID: 780303751
     locked: 0
   - name: WallsTop
     uniqueID: 231356247
+    locked: 0
+  - name: Interactions
+    uniqueID: 1759367883
     locked: 0
