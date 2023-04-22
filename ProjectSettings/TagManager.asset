@@ -11,7 +11,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - InvisibleColliders
   - 
   - 
   - 
@@ -38,6 +38,21 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Colliders
+    uniqueID: 1354655807
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Floor
+    uniqueID: 1730112311
+    locked: 0
+  - name: Walls
+    uniqueID: 1038024421
+    locked: 0
+  - name: Character
+    uniqueID: 780303751
+    locked: 0
+  - name: WallsTop
+    uniqueID: 231356247
     locked: 0
