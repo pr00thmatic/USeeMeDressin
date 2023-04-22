@@ -38,14 +38,17 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Interior
-    uniqueID: 1876406057
+  - name: Colliders
+    uniqueID: 877933727
     locked: 0
   - name: Floor
     uniqueID: 459681469
     locked: 0
-  - name: Colliders
-    uniqueID: 877933727
+  - name: Interior
+    uniqueID: 1876406057
+    locked: 0
+  - name: TopWalls
+    uniqueID: 2703874663
     locked: 0
   - name: Default
     uniqueID: 0
