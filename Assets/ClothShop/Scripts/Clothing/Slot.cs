@@ -1,4 +1,5 @@
-public enum ClothingTarget {
+namespace Clothing {
+public enum Slot {
   bottomChest,
   legL,
   legR,
@@ -8,4 +9,5 @@ public enum ClothingTarget {
   head,
   footR,
   footL
+}
 }

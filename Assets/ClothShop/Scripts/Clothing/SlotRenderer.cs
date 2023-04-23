@@ -2,10 +2,11 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
+namespace Clothing {
 [RequireComponent(typeof(SpriteRenderer))]
-public class ClothSkinTarget : MonoBehaviour {
+public class SlotRenderer : MonoBehaviour {
   [Header("Configuration")]
-  public ClothingTarget whatDresses;
+  public Slot whatDresses;
 
   [Header("Information")]
   public SpriteRenderer parent;
@@ -20,4 +21,5 @@ public class ClothSkinTarget : MonoBehaviour {
     displayTarget.sortingLayerName = parent.sortingLayerName;
     displayTarget.sortingOrder = parent.sortingOrder;
   }
+}
 }
