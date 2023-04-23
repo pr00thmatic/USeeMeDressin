@@ -19,7 +19,6 @@ public class Interactive : MonoBehaviour {
   }
 
   public void Focus () {
-    Debug.Log("focus" + Time.time);
     if (isFocused || !isInteractive) return;
 
     isFocused = true;
@@ -27,7 +26,6 @@ public class Interactive : MonoBehaviour {
   }
 
   public void Unfocus () {
-    Debug.Log("unfocus" + Time.time);
     if (!isFocused) return;
 
     isFocused = false;
