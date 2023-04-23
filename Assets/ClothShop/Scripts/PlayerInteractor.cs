@@ -19,7 +19,7 @@ public class PlayerInteractor : MonoBehaviour {
   }
 
   void Update () {
-    if (motion.orthogonalViewDirection != Vector2.zero) target.parent.up = motion.orthogonalViewDirection;
+    if (motion.viewDirection != Vector2.zero) target.parent.up = motion.viewDirection;
 
     // updates interactions focus
     hit = Physics2D.Raycast(transform.position, target.up,

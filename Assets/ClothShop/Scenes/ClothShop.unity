@@ -254,7 +254,7 @@ GameObject:
   - component: {fileID: 64467500}
   - component: {fileID: 64467499}
   - component: {fileID: 64467498}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -396,7 +396,7 @@ GameObject:
   - component: {fileID: 233165012}
   - component: {fileID: 233165011}
   - component: {fileID: 233165013}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: checkout table collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -7,25 +7,25 @@ public class PlayerMotion : MonoBehaviour {
   public float speed = 8;
 
   [Header("Information")]
-  public Vector2 desiredDeltaMovement;
-  public Vector2 orthogonalViewDirection;
+  public Vector2 desiredVelocity;
+  public Vector2 viewDirection;
 
   [Header("Initialization")]
   public Rigidbody2D body;
 
   void FixedUpdate () {
-    desiredDeltaMovement = Controls.Motion.Walk.ReadValue<Vector2>() * Time.fixedDeltaTime * speed;
-    body.MovePosition((Vector2) transform.position + desiredDeltaMovement);
+    desiredVelocity = Controls.Motion.Walk.ReadValue<Vector2>() * speed;
+    body.MovePosition((Vector2) transform.position + Time.fixedDeltaTime * desiredVelocity);
     UpdateViewDirection();
   }
 
   public void UpdateViewDirection () {
-    if (desiredDeltaMovement.magnitude < 0.1f) {
-      orthogonalViewDirection = Vector2.zero;
-    } else if (Mathf.Abs(desiredDeltaMovement.x) > Mathf.Abs(desiredDeltaMovement.y)) {
-      orthogonalViewDirection = Mathf.Sign(desiredDeltaMovement.x) * Vector2.right;
+    if (desiredVelocity.magnitude < 0.1f) {
+      viewDirection = Vector2.zero;
+    } else if (Mathf.Abs(desiredVelocity.x) > Mathf.Abs(desiredVelocity.y)) {
+      viewDirection = Mathf.Sign(desiredVelocity.x) * Vector2.right;
     } else {
-      orthogonalViewDirection = Mathf.Sign(desiredDeltaMovement.y) * Vector2.up;
+      viewDirection = Mathf.Sign(desiredVelocity.y) * Vector2.up;
     }
   }
 }

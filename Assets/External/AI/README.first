@@ -1,0 +1,3 @@
+This is a flexible state machine that I made some years ago.
+
+It ensures that only one state child of a StateMachine is active at any time.
