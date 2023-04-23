@@ -7,7 +7,8 @@ public class VisualState : MonoBehaviour {
   [Header("Configuration")]
   public VisualSlot visualSlot;
 
-  // [Header("Information")]
+  [Header("Information")]
+  public SlotRenderer[] foundSlots;
   // new clothSkinTargets shouldn't be added at runtime unless you modify this script
   // to update their skin targets each time they are added.
   public Dictionary<Slot, SlotRenderer> slots;
@@ -15,13 +16,14 @@ public class VisualState : MonoBehaviour {
   public void UpdateSkinTargets () {
     slots = new Dictionary<Slot, SlotRenderer>();
 
-    SlotRenderer[] foundSlots = GetComponentsInChildren<SlotRenderer>(true);
+    foundSlots = GetComponentsInChildren<SlotRenderer>(true);
     foreach (SlotRenderer slot in foundSlots) {
       slots[slot.whatDresses] = slot;
     }
   }
 
   public void Dress (DressableData data) {
+    if (slots == null) UpdateSkinTargets();
     foreach (ViewDefinition view in data.views) {
       if (view.visualSlot == visualSlot) {
         slots[view.target].displayTarget.sprite = view.skin;
@@ -30,10 +32,17 @@ public class VisualState : MonoBehaviour {
   }
 
   public void Remove (DressableData data) {
+    if (slots == null) UpdateSkinTargets();
     foreach (ViewDefinition view in data.views) {
       if (view.visualSlot == visualSlot) {
         slots[view.target].displayTarget.sprite = null;
       }
+    }
+  }
+
+  public void Remove () {
+    foreach (SlotRenderer renderer in foundSlots) {
+      renderer.displayTarget.sprite = null;
     }
   }
 }
