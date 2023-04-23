@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -7,15 +8,19 @@ public class PlayerInteractor : MonoBehaviour {
   public LayerMask interactionsAllowed;
 
   [Header("Information")]
-  public RaycastHit2D hit;
   public Interactive focused;
+  public RaycastHit2D hit;
 
   [Header("Initialization")]
   public Transform target;
   public PlayerMotion motion;
 
   void OnEnable () {
-    // Controls.Interactions.Interact += HandleInteraction;
+    Controls.Interactions.Interact.performed += HandleInteraction;
+  }
+
+  void OnDisable () {
+    Controls.Interactions.Interact.performed -= HandleInteraction;
   }
 
   void Update () {
@@ -34,5 +39,10 @@ public class PlayerInteractor : MonoBehaviour {
     Interactive found = hit.collider.GetComponent<Interactive>();
     if (focused != found) found.Focus();
     focused = found;
+  }
+
+  public void HandleInteraction (InputAction.CallbackContext ctx) {
+    if (!focused) return;
+    focused.Interact();
   }
 }

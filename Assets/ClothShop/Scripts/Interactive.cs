@@ -33,7 +33,7 @@ public class Interactive : MonoBehaviour {
   }
 
   public void Interact () {
-    if (isInteractive) return;
+    if (!isInteractive) return;
     onInteractionTriggered?.Invoke();
   }
 }

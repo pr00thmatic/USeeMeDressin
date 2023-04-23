@@ -5,6 +5,8 @@ using System.Collections.Generic;
 
 namespace Clothing.UI {
 public class ItemsForSale : MonoBehaviour {
+  public event System.Action onClose;
+
   [Header("Configuration")]
   public string resourcesPath = "Cloth";
 
@@ -22,6 +24,14 @@ public class ItemsForSale : MonoBehaviour {
   void OnEnable () {
     ReadEntriesFroResources();
     Selected.animator.SetBool("isSelected", true);
+    Controls.Motion.Disable();
+    Controls.Interactions.Disable();
+  }
+
+  void OnDisable () {
+    onClose?.Invoke();
+    Controls.Motion.Enable();
+    Controls.Interactions.Enable();
   }
 
   public void UpdateSelection (ClothForSaleEntry newSelection) {

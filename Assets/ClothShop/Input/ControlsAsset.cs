@@ -35,15 +35,6 @@ public partial class @ControlsAsset : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
-                },
-                {
-                    ""name"": ""MenuNavigate"",
-                    ""type"": ""Value"",
-                    ""id"": ""7ead64db-a82d-4a02-8a42-f9b8cdb03925"",
-                    ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -105,79 +96,52 @@ public partial class @ControlsAsset : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""a56a69dc-9f4f-43e5-8309-d832f05ae614"",
-                    ""path"": ""<Gamepad>/rightStick"",
+                    ""path"": ""<Gamepad>/leftStick"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Walk"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""Interactions"",
+            ""id"": ""ed1233f6-7975-4518-8e67-f6f9811aff30"",
+            ""actions"": [
+                {
+                    ""name"": ""Interact"",
+                    ""type"": ""Button"",
+                    ""id"": ""8f07ed12-d186-4455-bb9c-329d6b283cce"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""f352484e-3157-4bd5-ad72-3e89614ffff5"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""438122fb-c84b-4270-8ee2-934baeec1a86"",
-                    ""path"": ""<Gamepad>/rightStick"",
+                    ""id"": ""e9cdf302-ea51-4d7f-9b62-7f825af840f9"",
+                    ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""MenuNavigate"",
+                    ""action"": ""Interact"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""WASD"",
-                    ""id"": ""c5f6d42b-9d6d-4d77-a263-f5032340e188"",
-                    ""path"": ""2DVector"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""MenuNavigate"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""up"",
-                    ""id"": ""3d95120c-1e19-44ca-af63-a22fea0e8c76"",
-                    ""path"": ""<Keyboard>/w"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""MenuNavigate"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""down"",
-                    ""id"": ""9dc2a6f8-055e-4082-80d2-c77fc90324b7"",
-                    ""path"": ""<Keyboard>/s"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""MenuNavigate"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""left"",
-                    ""id"": ""00c25f38-5748-4644-b102-ecf90a908a87"",
-                    ""path"": ""<Keyboard>/a"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""MenuNavigate"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""right"",
-                    ""id"": ""f36dac9a-8d70-4256-8240-806dbf1cc011"",
-                    ""path"": ""<Keyboard>/d"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""MenuNavigate"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
                 }
             ]
         }
@@ -187,7 +151,9 @@ public partial class @ControlsAsset : IInputActionCollection2, IDisposable
         // Motion
         m_Motion = asset.FindActionMap("Motion", throwIfNotFound: true);
         m_Motion_Walk = m_Motion.FindAction("Walk", throwIfNotFound: true);
-        m_Motion_MenuNavigate = m_Motion.FindAction("MenuNavigate", throwIfNotFound: true);
+        // Interactions
+        m_Interactions = asset.FindActionMap("Interactions", throwIfNotFound: true);
+        m_Interactions_Interact = m_Interactions.FindAction("Interact", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -248,13 +214,11 @@ public partial class @ControlsAsset : IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Motion;
     private IMotionActions m_MotionActionsCallbackInterface;
     private readonly InputAction m_Motion_Walk;
-    private readonly InputAction m_Motion_MenuNavigate;
     public struct MotionActions
     {
         private @ControlsAsset m_Wrapper;
         public MotionActions(@ControlsAsset wrapper) { m_Wrapper = wrapper; }
         public InputAction @Walk => m_Wrapper.m_Motion_Walk;
-        public InputAction @MenuNavigate => m_Wrapper.m_Motion_MenuNavigate;
         public InputActionMap Get() { return m_Wrapper.m_Motion; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -267,9 +231,6 @@ public partial class @ControlsAsset : IInputActionCollection2, IDisposable
                 @Walk.started -= m_Wrapper.m_MotionActionsCallbackInterface.OnWalk;
                 @Walk.performed -= m_Wrapper.m_MotionActionsCallbackInterface.OnWalk;
                 @Walk.canceled -= m_Wrapper.m_MotionActionsCallbackInterface.OnWalk;
-                @MenuNavigate.started -= m_Wrapper.m_MotionActionsCallbackInterface.OnMenuNavigate;
-                @MenuNavigate.performed -= m_Wrapper.m_MotionActionsCallbackInterface.OnMenuNavigate;
-                @MenuNavigate.canceled -= m_Wrapper.m_MotionActionsCallbackInterface.OnMenuNavigate;
             }
             m_Wrapper.m_MotionActionsCallbackInterface = instance;
             if (instance != null)
@@ -277,16 +238,49 @@ public partial class @ControlsAsset : IInputActionCollection2, IDisposable
                 @Walk.started += instance.OnWalk;
                 @Walk.performed += instance.OnWalk;
                 @Walk.canceled += instance.OnWalk;
-                @MenuNavigate.started += instance.OnMenuNavigate;
-                @MenuNavigate.performed += instance.OnMenuNavigate;
-                @MenuNavigate.canceled += instance.OnMenuNavigate;
             }
         }
     }
     public MotionActions @Motion => new MotionActions(this);
+
+    // Interactions
+    private readonly InputActionMap m_Interactions;
+    private IInteractionsActions m_InteractionsActionsCallbackInterface;
+    private readonly InputAction m_Interactions_Interact;
+    public struct InteractionsActions
+    {
+        private @ControlsAsset m_Wrapper;
+        public InteractionsActions(@ControlsAsset wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Interact => m_Wrapper.m_Interactions_Interact;
+        public InputActionMap Get() { return m_Wrapper.m_Interactions; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(InteractionsActions set) { return set.Get(); }
+        public void SetCallbacks(IInteractionsActions instance)
+        {
+            if (m_Wrapper.m_InteractionsActionsCallbackInterface != null)
+            {
+                @Interact.started -= m_Wrapper.m_InteractionsActionsCallbackInterface.OnInteract;
+                @Interact.performed -= m_Wrapper.m_InteractionsActionsCallbackInterface.OnInteract;
+                @Interact.canceled -= m_Wrapper.m_InteractionsActionsCallbackInterface.OnInteract;
+            }
+            m_Wrapper.m_InteractionsActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Interact.started += instance.OnInteract;
+                @Interact.performed += instance.OnInteract;
+                @Interact.canceled += instance.OnInteract;
+            }
+        }
+    }
+    public InteractionsActions @Interactions => new InteractionsActions(this);
     public interface IMotionActions
     {
         void OnWalk(InputAction.CallbackContext context);
-        void OnMenuNavigate(InputAction.CallbackContext context);
+    }
+    public interface IInteractionsActions
+    {
+        void OnInteract(InputAction.CallbackContext context);
     }
 }
