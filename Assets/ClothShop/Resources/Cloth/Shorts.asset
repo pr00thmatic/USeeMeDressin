@@ -23,6 +23,24 @@ MonoBehaviour:
     - visualSlot: 2
       target: 0
       skin: {fileID: 687058584, guid: 893f8ade98672864884aac8d03efc00f, type: 3}
+    - visualSlot: 2
+      target: 1
+      skin: {fileID: 0}
+    - visualSlot: 2
+      target: 2
+      skin: {fileID: 0}
+    - visualSlot: 1
+      target: 2
+      skin: {fileID: 0}
+    - visualSlot: 1
+      target: 1
+      skin: {fileID: 0}
+    - visualSlot: 0
+      target: 1
+      skin: {fileID: 0}
+    - visualSlot: 0
+      target: 2
+      skin: {fileID: 0}
     sellPrice: 2
     buyPrice: 10
     name: Shorts

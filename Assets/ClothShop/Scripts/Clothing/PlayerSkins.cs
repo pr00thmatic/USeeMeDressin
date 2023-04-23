@@ -32,6 +32,8 @@ public class PlayerSkins : MonoBehaviour {
     foreach (Transform child in visualStatesParent) {
       child.GetComponent<VisualState>().Remove();
     }
+
+    wearing.Clear();
   }
 }
 }

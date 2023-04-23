@@ -32,6 +32,12 @@ MonoBehaviour:
     - visualSlot: 2
       target: 8
       skin: {fileID: 849563879, guid: 2ce4b7f02fc5eb34fbf4c177a6a82e58, type: 3}
+    - visualSlot: 2
+      target: 9
+      skin: {fileID: 0}
+    - visualSlot: 0
+      target: 10
+      skin: {fileID: 0}
     sellPrice: 10
     buyPrice: 100
     name: Red Convers

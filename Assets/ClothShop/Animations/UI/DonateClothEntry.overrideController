@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: DonateClothEntry
+  m_Controller: {fileID: 9100000, guid: c4ee175aa65c3a040a56adc7f9c870a9, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 5e94f765e243cf2499dcf5cac1de0d22, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 993e6ac23ac77d6408043130eb55fb95, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 4db2f9b0d9236d448803c3f9502836ca, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: f870f4248dd17b6409f1eced34078231, type: 2}

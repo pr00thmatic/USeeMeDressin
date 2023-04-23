@@ -22,12 +22,12 @@ public class ClothForSaleEntry : MonoBehaviour {
     return this;
   }
 
-  public void Buy () {
+  public virtual void Buy () {
     GetComponentInParent<ItemsForSale>().Buy(this);
   }
 
   public void UpdateSelection () {
-    GetComponentInParent<ItemsForSale>().UpdateSelection(this);
+    GetComponentInParent<ListWithSelectables>().UpdateSelection(this);
   }
 }
 }
