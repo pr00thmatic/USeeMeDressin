@@ -22,6 +22,10 @@ public class ClothForSaleEntry : MonoBehaviour {
     return this;
   }
 
+  public void Buy () {
+    GetComponentInParent<ItemsForSale>().Buy(this);
+  }
+
   public void UpdateSelection () {
     GetComponentInParent<ItemsForSale>().UpdateSelection(this);
   }

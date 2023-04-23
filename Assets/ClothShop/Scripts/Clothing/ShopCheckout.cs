@@ -18,6 +18,7 @@ public class ShopCheckout : MonoBehaviour {
   }
 
   public void OpenShopUI () {
+    shopUI.client = interactive.lastInteractor.gameObject;
     shopUI.gameObject.SetActive(true);
   }
 }

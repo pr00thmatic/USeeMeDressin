@@ -1661,8 +1661,10 @@ MonoBehaviour:
   navigation: {x: 0, y: 0}
   timestampIdle: 0
   orientation: 0
+  client: {fileID: 0}
   entryPrototype: {fileID: 6437691179728829710, guid: 2f2d6aec89c25f24cb843c9b97395f26, type: 3}
   entriesParent: {fileID: 1848327633}
+  root: {fileID: 619933789}
 --- !u!1 &636320342
 GameObject:
   m_ObjectHideFlags: 0
@@ -4222,6 +4224,7 @@ MonoBehaviour:
         m_CallState: 2
   isInteractive: 1
   isFocused: 0
+  lastInteractor: {fileID: 0}
 --- !u!114 &1637143089
 MonoBehaviour:
   m_ObjectHideFlags: 0

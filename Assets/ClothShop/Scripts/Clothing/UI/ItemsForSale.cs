@@ -16,10 +16,12 @@ public class ItemsForSale : MonoBehaviour {
   public Vector2 navigation;
   public float timestampIdle = 0;
   public int orientation = 0;
+  public GameObject client;
 
   [Header("Initialization")]
   public ClothForSaleEntry entryPrototype;
   public Transform entriesParent;
+  public Transform root;
 
   void OnEnable () {
     ReadEntriesFroResources();
@@ -34,23 +36,16 @@ public class ItemsForSale : MonoBehaviour {
     Controls.Interactions.Enable();
   }
 
+  public void Buy (ClothForSaleEntry bought) {
+    client.GetComponentInParent<PlayerReferences>().skin.Dress(bought.data);
+    Close();
+  }
+
   public void UpdateSelection (ClothForSaleEntry newSelection) {
     Selected.animator.SetBool("isSelected", false);
     selected = newSelection.transform.GetSiblingIndex();
     Selected.animator.SetBool("isSelected", true);
   }
-
-  // TODO: implement controls for navigating the menu with keyboard and gamepad
-  // void Update () {
-  //   navigation = Controls.Motion.MenuNavigation.ReadValue<Vector2>();
-
-  //   if (Mathf.Sign(navigation.y) != orientation) {
-  //     timestampIdle = Time.time;
-  //     if (Mathf.Abs(navigation.y) > 0.2f) {
-  //       selected = (entriesParent.childCount + (orientation + selected)) % entriesParent.childCount;
-  //     }
-  //   }
-  // }
 
   public void ReadEntriesFroResources () {
     Clear();
@@ -66,6 +61,23 @@ public class ItemsForSale : MonoBehaviour {
       Destroy(entriesParent.GetChild(i).gameObject);
     }
   }
+
+  // TODO: add animationz
+  public void Close () {
+    root.gameObject.SetActive(false);
+  }
+
+  // TODO: implement controls for navigating the menu with keyboard and gamepad
+  // void Update () {
+  //   navigation = Controls.Motion.MenuNavigation.ReadValue<Vector2>();
+
+  //   if (Mathf.Sign(navigation.y) != orientation) {
+  //     timestampIdle = Time.time;
+  //     if (Mathf.Abs(navigation.y) > 0.2f) {
+  //       selected = (entriesParent.childCount + (orientation + selected)) % entriesParent.childCount;
+  //     }
+  //   }
+  // }
 
   // public void ScrollWithKeys () {
   // }

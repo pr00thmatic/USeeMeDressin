@@ -13,6 +13,7 @@ public class Interactive : MonoBehaviour {
 
   [Header("Information")]
   public bool isFocused = false;
+  public PlayerInteractor lastInteractor;
 
   void OnEnable () {
     onUnfocus.Invoke();
@@ -32,8 +33,9 @@ public class Interactive : MonoBehaviour {
     onUnfocus.Invoke();
   }
 
-  public void Interact () {
+  public void Interact (PlayerInteractor interactor) {
     if (!isInteractive) return;
+    lastInteractor = interactor;
     onInteractionTriggered?.Invoke();
   }
 }

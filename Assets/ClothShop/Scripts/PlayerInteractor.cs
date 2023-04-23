@@ -43,6 +43,6 @@ public class PlayerInteractor : MonoBehaviour {
 
   public void HandleInteraction (InputAction.CallbackContext ctx) {
     if (!focused) return;
-    focused.Interact();
+    focused.Interact(this);
   }
 }
