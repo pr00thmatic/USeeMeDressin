@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ad95c552a75d1a4e8b8544922e9991d, type: 3}
+  m_Name: SlippersOWO
+  m_EditorClassIdentifier: 
+  data:
+    views:
+    - visualSlot: 0
+      target: 7
+      skin: {fileID: -705264298, guid: fdd0ddaeedabbd8449d6becbda0f7de3, type: 3}
+    - visualSlot: 0
+      target: 8
+      skin: {fileID: -2105431406, guid: fdd0ddaeedabbd8449d6becbda0f7de3, type: 3}
+    - visualSlot: 1
+      target: 7
+      skin: {fileID: 737658846, guid: fdd0ddaeedabbd8449d6becbda0f7de3, type: 3}
+    - visualSlot: 1
+      target: 8
+      skin: {fileID: 737658846, guid: fdd0ddaeedabbd8449d6becbda0f7de3, type: 3}
+    - visualSlot: 2
+      target: 7
+      skin: {fileID: -1912713366, guid: fdd0ddaeedabbd8449d6becbda0f7de3, type: 3}
+    - visualSlot: 2
+      target: 8
+      skin: {fileID: 849563879, guid: fdd0ddaeedabbd8449d6becbda0f7de3, type: 3}
+    - visualSlot: 2
+      target: 9
+      skin: {fileID: -747105654, guid: fdd0ddaeedabbd8449d6becbda0f7de3, type: 3}
+    - visualSlot: 2
+      target: 10
+      skin: {fileID: -139044652, guid: fdd0ddaeedabbd8449d6becbda0f7de3, type: 3}
+    sellPrice: 1
+    buyPrice: 2
+    name: Slippers owo
+    icon: {fileID: 21300000, guid: 7814b802721614642b10e035c0c83a1d, type: 3}

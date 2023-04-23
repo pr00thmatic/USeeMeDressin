@@ -8,6 +8,8 @@ public enum Slot {
   topChest,
   head,
   footR,
-  footL
+  footL,
+  ankleR,
+  ankleL
 }
 }

@@ -19,7 +19,7 @@ public class SlotRenderer : MonoBehaviour {
     displayTarget = GetComponent<SpriteRenderer>();
     parent = transform.parent.GetComponentInParent<SpriteRenderer>(true);
     displayTarget.sortingLayerName = parent.sortingLayerName;
-    displayTarget.sortingOrder = parent.sortingOrder;
+    displayTarget.sortingOrder = parent.sortingOrder+1;
   }
 }
 }
