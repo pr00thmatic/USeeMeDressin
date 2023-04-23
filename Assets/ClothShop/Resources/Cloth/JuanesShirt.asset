@@ -41,7 +41,7 @@ MonoBehaviour:
     - visualSlot: 2
       target: 4
       skin: {fileID: -1770102388, guid: 690bb2a01ec3ad44a9181e0e22ecafce, type: 3}
-    sellPrice: 4
-    buyPrice: 5
+    sellPrice: 5
+    buyPrice: 20
     name: Camisa Negra
     icon: {fileID: 21300000, guid: 1312e30815b0f4f4599ee4505d4ff5cb, type: 3}
