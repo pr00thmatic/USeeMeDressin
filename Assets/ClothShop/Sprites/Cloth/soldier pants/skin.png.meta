@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 907985301bd66714f9f3b90106c3cfc2
+guid: c24813504e1ab0d47a9eaf2baff21e7d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,169 +104,169 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: head
+      name: back legs L
       rect:
         serializedVersion: 2
-        x: 16
-        y: 443
-        width: 266
-        height: 220
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 88
+        y: 358
+        width: 59
+        height: 90
+      alignment: 9
+      pivot: {x: 0.48738357, y: 0.80601776}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d6203246fee17b7489f8864148d03b8c
-      internalID: 2010427450
+      spriteID: 9b32a1b3d819164468a1b48d64955f56
+      internalID: -244577488
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: arm.R
+      name: back legs R
       rect:
         serializedVersion: 2
-        x: 449
-        y: 475
-        width: 70
-        height: 142
+        x: 153
+        y: 353
+        width: 62
+        height: 94
       alignment: 9
-      pivot: {x: 0.19647653, y: 0.7844367}
+      pivot: {x: 0.5, y: 0.80883336}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 16b7b4120d39f4840b521939fad75054
-      internalID: 997611962
+      spriteID: 3d1a3c751088b4e4b96c45338b614b32
+      internalID: 2071734489
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: arm.L
+      name: back bottom body
       rect:
         serializedVersion: 2
-        x: 310
-        y: 475
-        width: 69
-        height: 142
+        x: 326
+        y: 367
+        width: 126
+        height: 72
       alignment: 9
-      pivot: {x: 0.7473609, y: 0.78354615}
+      pivot: {x: 0.5059083, y: 0.7067693}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5584d40057fbc9c4891328a81e828b16
-      internalID: 470809533
+      spriteID: 9e58fc84f0a77e64e84ef5084f039ca2
+      internalID: 687058584
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: body
+      name: side bottom body
       rect:
         serializedVersion: 2
-        x: 85
-        y: 207
-        width: 115
-        height: 193
+        x: 75
+        y: 206
+        width: 125
+        height: 77
       alignment: 9
-      pivot: {x: 0.48214287, y: 0.14496818}
+      pivot: {x: 0.55359435, y: 0.64500684}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 792ae6af6c5bbb74988f27963ca7b0f0
-      internalID: 1221811907
+      spriteID: c0a2cca55d5c40b41b51c9b6f178eec6
+      internalID: -600191829
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: leg.L
+      name: side leg
       rect:
         serializedVersion: 2
-        x: 365
-        y: 223
-        width: 33
-        height: 91
+        x: 367
+        y: 197
+        width: 55
+        height: 90
       alignment: 9
-      pivot: {x: 0.5, y: 1.1564087}
+      pivot: {x: 0.4864663, y: 0.8225593}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ce45c4d58941174ab38bf65c8b7ec5c
-      internalID: 980784314
+      spriteID: 77860e8a2fcd5c44f8351597824c42a8
+      internalID: -1126129398
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: leg.R
+      name: front leg L
       rect:
         serializedVersion: 2
-        x: 435
-        y: 223
-        width: 32
-        height: 89
+        x: 84
+        y: 48
+        width: 59
+        height: 90
       alignment: 9
-      pivot: {x: 0.49999905, y: 1.1599231}
+      pivot: {x: 0.52523285, y: 0.69022715}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b24f1aaeff2d7c04a817a755750f195d
-      internalID: -14632059
+      spriteID: fa645fb8cda35134c8f37c8cc828866d
+      internalID: -522709313
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: foot.L
+      name: front leg R
       rect:
         serializedVersion: 2
-        x: 342
-        y: 74
-        width: 64
-        height: 45
+        x: 151
+        y: 48
+        width: 59
+        height: 90
       alignment: 9
-      pivot: {x: 0.76053524, y: 1.1206907}
+      pivot: {x: 0.5126167, y: 0.6488734}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d580ddfa101604240bda87001f9b16b0
-      internalID: 819193529
+      spriteID: e231b9bfc52d37f4f80f0155360bd66d
+      internalID: 1746756426
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: foot.R
+      name: front bottom body
       rect:
         serializedVersion: 2
-        x: 443
-        y: 74
-        width: 64
-        height: 45
+        x: 328
+        y: 57
+        width: 129
+        height: 70
       alignment: 9
-      pivot: {x: 0.2688384, y: 1.1181325}
+      pivot: {x: 0.5057707, y: 0.7126761}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e0afa4da6283ce42aacdeec0887fb92
-      internalID: -1617072352
+      spriteID: a412dbd7c0de77841911b7c9707093df
+      internalID: 1037146428
       vertices: []
       indices: 
       edges: []
@@ -282,14 +282,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      foot.R: -1617072352
-      foot.L: 819193529
-      arm.R: 997611962
-      head: 2010427450
-      arm.L: 470809533
-      leg.L: 980784314
-      body: 1221811907
-      leg.R: -14632059
+      front leg L: -522709313
+      back bottom body: 687058584
+      side leg: -1126129398
+      front bottom body: 1037146428
+      back legs L: -244577488
+      front leg R: 1746756426
+      back legs R: 2071734489
+      side bottom body: -600191829
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
