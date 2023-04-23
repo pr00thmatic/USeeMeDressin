@@ -1900,7 +1900,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!210 &1714760478
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -1909,8 +1909,8 @@ SortingGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1714760477}
   m_Enabled: 1
-  m_SortingLayerID: 780303751
-  m_SortingLayer: 0
+  m_SortingLayerID: 1876406057
+  m_SortingLayer: -2
   m_SortingOrder: 0
 --- !u!4 &1714760479
 Transform:

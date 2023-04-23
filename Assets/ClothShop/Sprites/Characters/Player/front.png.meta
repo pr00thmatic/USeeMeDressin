@@ -107,10 +107,10 @@ TextureImporter:
       name: head
       rect:
         serializedVersion: 2
-        x: 26
-        y: 383
-        width: 235
-        height: 332
+        x: 16
+        y: 487
+        width: 268
+        height: 224
       alignment: 9
       pivot: {x: 0.5, y: 0.04853067}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,10 +128,10 @@ TextureImporter:
       name: arm.L
       rect:
         serializedVersion: 2
-        x: 331
-        y: 370
-        width: 71
-        height: 246
+        x: 302
+        y: 345
+        width: 64
+        height: 130
       alignment: 9
       pivot: {x: 0.7162592, y: 0.8804413}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,10 +149,10 @@ TextureImporter:
       name: arm.R
       rect:
         serializedVersion: 2
-        x: 473
-        y: 370
-        width: 73
-        height: 245
+        x: 453
+        y: 345
+        width: 64
+        height: 130
       alignment: 9
       pivot: {x: 0.24960369, y: 0.8879629}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -170,10 +170,10 @@ TextureImporter:
       name: body
       rect:
         serializedVersion: 2
-        x: 73
-        y: 60
-        width: 126
-        height: 263
+        x: 96
+        y: 233
+        width: 117
+        height: 153
       alignment: 9
       pivot: {x: 0.5, y: 0.110789336}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -191,10 +191,10 @@ TextureImporter:
       name: leg.L
       rect:
         serializedVersion: 2
-        x: 310
-        y: 8
-        width: 97
-        height: 269
+        x: 342
+        y: 74
+        width: 69
+        height: 110
       alignment: 9
       pivot: {x: 0.67336816, y: 0.92130053}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -212,10 +212,10 @@ TextureImporter:
       name: leg.R
       rect:
         serializedVersion: 2
-        x: 417
-        y: 8
-        width: 97
-        height: 267
+        x: 442
+        y: 74
+        width: 69
+        height: 109
       alignment: 9
       pivot: {x: 0.3341703, y: 0.91350275}
       border: {x: 0, y: 0, z: 0, w: 0}
