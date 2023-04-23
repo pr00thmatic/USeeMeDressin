@@ -22,5 +22,11 @@ public class VisualState : MonoBehaviour {
       slots[view.target].displayTarget.sprite = view.skin;
     }
   }
+
+  public void Remove (DressableData data) {
+    foreach (ViewDefinition view in data.views) {
+      slots[view.target].displayTarget.sprite = null;
+    }
+  }
 }
 }
