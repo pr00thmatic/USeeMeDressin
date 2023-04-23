@@ -47,6 +47,9 @@ TagManager:
   - name: Shadows
     uniqueID: 2012032225
     locked: 0
+  - name: Walls
+    uniqueID: 933893191
+    locked: 0
   - name: Interior
     uniqueID: 1876406057
     locked: 0
