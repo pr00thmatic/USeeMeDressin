@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class State : MonoBehaviour {
-  public event System.Action<State> onExit;
+public class Pr00State : MonoBehaviour {
+  public event System.Action<Pr00State> onExit;
 
   void OnEnable () {
     foreach (Transform brother in transform.parent) {
-      if (brother.GetComponent<State>() && brother.gameObject.activeSelf && brother != transform) {
+      if (brother.GetComponent<Pr00State>() && brother.gameObject.activeSelf && brother != transform) {
         brother.gameObject.SetActive(false);
       }
     }

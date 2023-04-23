@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StateMachine : MonoBehaviour {
-  public event System.Action<State> onStateChange;
+public class Pr00StateMachine : MonoBehaviour {
+  public event System.Action<Pr00State> onStateChange;
 
   void OnEnable () {
     foreach (Transform child in transform) {
-      State childState = child.GetComponent<State>();
+      Pr00State childState = child.GetComponent<Pr00State>();
       if (childState) {
         childState.onExit += HandleStateChange;
       }
@@ -38,11 +38,11 @@ public class StateMachine : MonoBehaviour {
     return null;
   }
 
-  public State SetState (State state) {
+  public Pr00State SetState (Pr00State state) {
     foreach (Transform child in transform) {
-      if (child.GetComponent<State>() == state) {
+      if (child.GetComponent<Pr00State>() == state) {
         child.gameObject.SetActive(true);
-        return child.GetComponent<State>();
+        return child.GetComponent<Pr00State>();
       }
     }
 
@@ -66,15 +66,15 @@ public class StateMachine : MonoBehaviour {
     return found;
   }
 
-  public void HandleStateChange (State state) {
+  public void HandleStateChange (Pr00State state) {
     if (gameObject && gameObject.activeInHierarchy) {
       onStateChange?.Invoke(state);
     }
   }
 
-  public State GetCurrentState () {
+  public Pr00State GetCurrentState () {
     foreach (Transform child in transform) {
-      State state = child.GetComponent<State>();
+      Pr00State state = child.GetComponent<Pr00State>();
       if (state.gameObject.activeSelf) return state;
     }
     return null;
