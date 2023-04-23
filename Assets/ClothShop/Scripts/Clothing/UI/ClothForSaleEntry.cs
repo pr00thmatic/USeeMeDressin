@@ -13,7 +13,7 @@ public class ClothForSaleEntry : MonoBehaviour {
   public DressableData data;
   public Animator animator;
 
-  public ClothForSaleEntry Display (DressableData itemData) {
+  public virtual ClothForSaleEntry Display (DressableData itemData) {
     data = itemData;
     this.icon.sprite = itemData.icon;
     this.nameLabel.text = itemData.name;

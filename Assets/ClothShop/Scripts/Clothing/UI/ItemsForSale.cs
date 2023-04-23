@@ -18,12 +18,13 @@ public class ItemsForSale : MonoBehaviour {
 
   [Header("Initialization")]
   public ClothForSaleEntry entryPrototype;
+  public ClothDonationEntry donationEntryPrototype;
   public ListWithSelectables forSale;
   public ListWithSelectables toDonate;
   public Transform root;
 
   void OnEnable () {
-    ReadEntriesFroResources();
+    LoadEntries();
     Controls.Motion.Disable();
     Controls.Interactions.Disable();
   }
@@ -41,9 +42,10 @@ public class ItemsForSale : MonoBehaviour {
 
   public void Donate (ClothDonationEntry donated) {
     client.GetComponentInParent<PlayerReferences>().skin.Remove(donated.data);
+    Close();
   }
 
-  public void ReadEntriesFroResources () {
+  public void LoadEntries () {
     forSale.Clear();
     toDonate.Clear();
 
@@ -51,6 +53,13 @@ public class ItemsForSale : MonoBehaviour {
     foreach (ForSaleItem item in availableItems) {
       ClothForSaleEntry entry = Instantiate(entryPrototype).Display(item.data);
       entry.transform.SetParent(forSale.entriesParent);
+    }
+
+    PlayerSkins skin = client.GetComponentInParent<PlayerReferences>().skin;
+    List<DressableData> wearing = skin.wearing;
+    foreach (DressableData cloth in wearing) {
+      ClothDonationEntry entry = Instantiate(donationEntryPrototype).Display(cloth) as ClothDonationEntry;
+      entry.transform.SetParent(toDonate.entriesParent);
     }
   }
 
