@@ -44,6 +44,9 @@ TagManager:
   - name: Floor
     uniqueID: 459681469
     locked: 0
+  - name: Shadows
+    uniqueID: 2012032225
+    locked: 0
   - name: Interior
     uniqueID: 1876406057
     locked: 0
