@@ -4,6 +4,10 @@ using System.Collections.Generic;
 
 namespace Clothing {
 public class VisualState : MonoBehaviour {
+  [Header("Configuration")]
+  public VisualSlot visualSlot;
+
+  // [Header("Information")]
   // new clothSkinTargets shouldn't be added at runtime unless you modify this script
   // to update their skin targets each time they are added.
   public Dictionary<Slot, SlotRenderer> slots;
@@ -19,13 +23,17 @@ public class VisualState : MonoBehaviour {
 
   public void Dress (DressableData data) {
     foreach (ViewDefinition view in data.views) {
-      slots[view.target].displayTarget.sprite = view.skin;
+      if (view.visualSlot == visualSlot) {
+        slots[view.target].displayTarget.sprite = view.skin;
+      }
     }
   }
 
   public void Remove (DressableData data) {
     foreach (ViewDefinition view in data.views) {
-      slots[view.target].displayTarget.sprite = null;
+      if (view.visualSlot == visualSlot) {
+        slots[view.target].displayTarget.sprite = null;
+      }
     }
   }
 }
