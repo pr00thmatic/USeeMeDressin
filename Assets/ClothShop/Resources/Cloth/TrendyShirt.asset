@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ad95c552a75d1a4e8b8544922e9991d, type: 3}
+  m_Name: TrendyShirt
+  m_EditorClassIdentifier: 
+  data:
+    views:
+    - visualSlot: 0
+      target: 5
+      skin: {fileID: 1868508180, guid: 208fc10e3727166409d0ded04ad5b67d, type: 3}
+    - visualSlot: 0
+      target: 3
+      skin: {fileID: -1449283281, guid: 208fc10e3727166409d0ded04ad5b67d, type: 3}
+    - visualSlot: 0
+      target: 4
+      skin: {fileID: -684791317, guid: 208fc10e3727166409d0ded04ad5b67d, type: 3}
+    - visualSlot: 1
+      target: 4
+      skin: {fileID: 326281644, guid: 208fc10e3727166409d0ded04ad5b67d, type: 3}
+    - visualSlot: 1
+      target: 3
+      skin: {fileID: 326281644, guid: 208fc10e3727166409d0ded04ad5b67d, type: 3}
+    - visualSlot: 1
+      target: 5
+      skin: {fileID: 1008908750, guid: 208fc10e3727166409d0ded04ad5b67d, type: 3}
+    - visualSlot: 2
+      target: 5
+      skin: {fileID: -812151213, guid: 208fc10e3727166409d0ded04ad5b67d, type: 3}
+    - visualSlot: 2
+      target: 3
+      skin: {fileID: -893681911, guid: 208fc10e3727166409d0ded04ad5b67d, type: 3}
+    - visualSlot: 2
+      target: 4
+      skin: {fileID: -1770102388, guid: 208fc10e3727166409d0ded04ad5b67d, type: 3}
+    sellPrice: 2
+    buyPrice: 15
+    name: Trendy Shirt
+    icon: {fileID: 21300000, guid: 3c414d930e52caa40ae2c7c52755d21c, type: 3}
