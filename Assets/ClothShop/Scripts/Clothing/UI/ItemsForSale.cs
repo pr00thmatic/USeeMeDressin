@@ -25,14 +25,10 @@ public class ItemsForSale : MonoBehaviour {
 
   void OnEnable () {
     LoadEntries();
-    Controls.Motion.Disable();
-    Controls.Interactions.Disable();
   }
 
   void OnDisable () {
     onClose?.Invoke();
-    Controls.Motion.Enable();
-    Controls.Interactions.Enable();
   }
 
   public void Buy (ClothForSaleEntry bought) {

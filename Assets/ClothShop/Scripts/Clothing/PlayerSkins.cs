@@ -26,6 +26,25 @@ public class PlayerSkins : MonoBehaviour {
     wearing.Add(data);
   }
 
+  public DressableData GetClothAt (BodySlot bodySlot) {
+    foreach (DressableData cloth in wearing) {
+      if (cloth.bodySlot == bodySlot) {
+        return cloth;
+      }
+    }
+
+    return new DressableData();
+  }
+
+  public void Remove (BodySlot bodySlot) {
+    foreach (DressableData cloth in wearing) {
+      if (cloth.bodySlot == bodySlot) {
+        Remove(cloth);
+        break;
+      }
+    }
+  }
+
   public void Remove (DressableData data) {
     foreach (Transform child in visualStatesParent) {
       child.GetComponent<VisualState>().Remove(data);
