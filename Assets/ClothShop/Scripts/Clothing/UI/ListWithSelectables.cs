@@ -11,6 +11,10 @@ public class ListWithSelectables : MonoBehaviour {
   [Header("Initialization")]
   public Transform entriesParent;
 
+  void OnEnable () {
+    selected = 0;
+  }
+
   public void UpdateSelection (ClothForSaleEntry newSelection) {
     Selected.animator.SetBool("isSelected", false);
     selected = newSelection.transform.GetSiblingIndex();
