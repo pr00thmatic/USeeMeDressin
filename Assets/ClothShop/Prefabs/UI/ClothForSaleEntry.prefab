@@ -147,7 +147,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 20g
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6ce2c0473f3dbff48aadc21e5f9fdbb0, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -358,7 +358,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Slippers owo
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6ce2c0473f3dbff48aadc21e5f9fdbb0, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -527,6 +527,7 @@ MonoBehaviour:
   nameLabel: {fileID: 1975485299}
   priceLabel: {fileID: 339914560}
   data:
+    bodySlot: 0
     views: []
     sellPrice: 4
     buyPrice: 5

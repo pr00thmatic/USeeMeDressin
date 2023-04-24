@@ -32,12 +32,16 @@ public class ItemsForSale : MonoBehaviour {
   }
 
   public void Buy (ClothForSaleEntry bought) {
-    client.GetComponentInParent<PlayerReferences>().skin.Dress(bought.data);
-    Close();
+    if (TemporalMoneyManager.CanSpend(bought.data.buyPrice)) {
+      TemporalMoneyManager.Spend(bought.data.buyPrice);
+      client.GetComponentInParent<PlayerReferences>().skin.Dress(bought.data);
+      Close();
+    }
   }
 
   public void Donate (ClothDonationEntry donated) {
     client.GetComponentInParent<PlayerReferences>().skin.Remove(donated.data);
+    TemporalMoneyManager.AddMoney(donated.data.sellPrice);
     Close();
   }
 
