@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: SlippersOWO
   m_EditorClassIdentifier: 
   data:
+    bodySlot: 3
     views:
     - visualSlot: 0
       target: 7

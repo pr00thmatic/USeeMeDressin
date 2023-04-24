@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: TrendyShirt
   m_EditorClassIdentifier: 
   data:
+    bodySlot: 1
     views:
     - visualSlot: 0
       target: 5

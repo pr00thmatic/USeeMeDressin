@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: SoldierPants
   m_EditorClassIdentifier: 
   data:
+    bodySlot: 2
     views:
     - visualSlot: 0
       target: 1

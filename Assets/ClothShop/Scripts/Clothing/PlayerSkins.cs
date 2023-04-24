@@ -13,6 +13,12 @@ public class PlayerSkins : MonoBehaviour {
   public List<DressableData> wearing = new List<DressableData>();
 
   public void Dress (DressableData data) {
+    foreach (DressableData cloth in wearing) {
+      if (cloth.bodySlot == data.bodySlot) {
+        Remove(cloth);
+        break;
+      }
+    }
     foreach (Transform child in visualStatesParent) {
       child.GetComponent<VisualState>().Dress(data);
     }
