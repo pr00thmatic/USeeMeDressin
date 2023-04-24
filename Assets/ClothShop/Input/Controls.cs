@@ -11,4 +11,5 @@ public static class Controls {
   }
   public static ControlsAsset.MotionActions Motion { get => Asset.Motion; }
   public static ControlsAsset.InteractionsActions Interactions { get => Asset.Interactions; }
+  public static ControlsAsset.MenuActionsActions MenuActions { get => Asset.MenuActions; }
 }

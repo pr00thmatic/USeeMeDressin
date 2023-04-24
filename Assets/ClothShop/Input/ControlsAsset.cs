@@ -182,15 +182,6 @@ public partial class @ControlsAsset : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""CloseMenu"",
-                    ""type"": ""Button"",
-                    ""id"": ""14469ef1-4569-4411-8e5f-4a28fcfee2fe"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -259,10 +250,27 @@ public partial class @ControlsAsset : IInputActionCollection2, IDisposable
                     ""action"": ""OpenInventory"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
-                },
+                }
+            ]
+        },
+        {
+            ""name"": ""MenuActions"",
+            ""id"": ""02e8768d-1ebe-4f73-90f1-0fc355bf4723"",
+            ""actions"": [
+                {
+                    ""name"": ""CloseMenu"",
+                    ""type"": ""Button"",
+                    ""id"": ""b3f91a16-205b-473c-9b97-44b6415e6e97"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""aff9dfbe-3827-47ed-8a0b-b3a7184f2c70"",
+                    ""id"": ""add0616d-47ff-464a-aa52-0dd4e139e533"",
                     ""path"": ""<Keyboard>/escape"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -273,7 +281,7 @@ public partial class @ControlsAsset : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""b087c20b-2628-434d-96b1-d1f608e1e4fd"",
+                    ""id"": ""ccca7332-b476-4504-9850-c1a55801db92"",
                     ""path"": ""<Gamepad>/buttonEast"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -294,7 +302,9 @@ public partial class @ControlsAsset : IInputActionCollection2, IDisposable
         m_Interactions = asset.FindActionMap("Interactions", throwIfNotFound: true);
         m_Interactions_Interact = m_Interactions.FindAction("Interact", throwIfNotFound: true);
         m_Interactions_OpenInventory = m_Interactions.FindAction("OpenInventory", throwIfNotFound: true);
-        m_Interactions_CloseMenu = m_Interactions.FindAction("CloseMenu", throwIfNotFound: true);
+        // MenuActions
+        m_MenuActions = asset.FindActionMap("MenuActions", throwIfNotFound: true);
+        m_MenuActions_CloseMenu = m_MenuActions.FindAction("CloseMenu", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -389,14 +399,12 @@ public partial class @ControlsAsset : IInputActionCollection2, IDisposable
     private IInteractionsActions m_InteractionsActionsCallbackInterface;
     private readonly InputAction m_Interactions_Interact;
     private readonly InputAction m_Interactions_OpenInventory;
-    private readonly InputAction m_Interactions_CloseMenu;
     public struct InteractionsActions
     {
         private @ControlsAsset m_Wrapper;
         public InteractionsActions(@ControlsAsset wrapper) { m_Wrapper = wrapper; }
         public InputAction @Interact => m_Wrapper.m_Interactions_Interact;
         public InputAction @OpenInventory => m_Wrapper.m_Interactions_OpenInventory;
-        public InputAction @CloseMenu => m_Wrapper.m_Interactions_CloseMenu;
         public InputActionMap Get() { return m_Wrapper.m_Interactions; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -412,9 +420,6 @@ public partial class @ControlsAsset : IInputActionCollection2, IDisposable
                 @OpenInventory.started -= m_Wrapper.m_InteractionsActionsCallbackInterface.OnOpenInventory;
                 @OpenInventory.performed -= m_Wrapper.m_InteractionsActionsCallbackInterface.OnOpenInventory;
                 @OpenInventory.canceled -= m_Wrapper.m_InteractionsActionsCallbackInterface.OnOpenInventory;
-                @CloseMenu.started -= m_Wrapper.m_InteractionsActionsCallbackInterface.OnCloseMenu;
-                @CloseMenu.performed -= m_Wrapper.m_InteractionsActionsCallbackInterface.OnCloseMenu;
-                @CloseMenu.canceled -= m_Wrapper.m_InteractionsActionsCallbackInterface.OnCloseMenu;
             }
             m_Wrapper.m_InteractionsActionsCallbackInterface = instance;
             if (instance != null)
@@ -425,13 +430,43 @@ public partial class @ControlsAsset : IInputActionCollection2, IDisposable
                 @OpenInventory.started += instance.OnOpenInventory;
                 @OpenInventory.performed += instance.OnOpenInventory;
                 @OpenInventory.canceled += instance.OnOpenInventory;
+            }
+        }
+    }
+    public InteractionsActions @Interactions => new InteractionsActions(this);
+
+    // MenuActions
+    private readonly InputActionMap m_MenuActions;
+    private IMenuActionsActions m_MenuActionsActionsCallbackInterface;
+    private readonly InputAction m_MenuActions_CloseMenu;
+    public struct MenuActionsActions
+    {
+        private @ControlsAsset m_Wrapper;
+        public MenuActionsActions(@ControlsAsset wrapper) { m_Wrapper = wrapper; }
+        public InputAction @CloseMenu => m_Wrapper.m_MenuActions_CloseMenu;
+        public InputActionMap Get() { return m_Wrapper.m_MenuActions; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(MenuActionsActions set) { return set.Get(); }
+        public void SetCallbacks(IMenuActionsActions instance)
+        {
+            if (m_Wrapper.m_MenuActionsActionsCallbackInterface != null)
+            {
+                @CloseMenu.started -= m_Wrapper.m_MenuActionsActionsCallbackInterface.OnCloseMenu;
+                @CloseMenu.performed -= m_Wrapper.m_MenuActionsActionsCallbackInterface.OnCloseMenu;
+                @CloseMenu.canceled -= m_Wrapper.m_MenuActionsActionsCallbackInterface.OnCloseMenu;
+            }
+            m_Wrapper.m_MenuActionsActionsCallbackInterface = instance;
+            if (instance != null)
+            {
                 @CloseMenu.started += instance.OnCloseMenu;
                 @CloseMenu.performed += instance.OnCloseMenu;
                 @CloseMenu.canceled += instance.OnCloseMenu;
             }
         }
     }
-    public InteractionsActions @Interactions => new InteractionsActions(this);
+    public MenuActionsActions @MenuActions => new MenuActionsActions(this);
     public interface IMotionActions
     {
         void OnWalk(InputAction.CallbackContext context);
@@ -440,6 +475,9 @@ public partial class @ControlsAsset : IInputActionCollection2, IDisposable
     {
         void OnInteract(InputAction.CallbackContext context);
         void OnOpenInventory(InputAction.CallbackContext context);
+    }
+    public interface IMenuActionsActions
+    {
         void OnCloseMenu(InputAction.CallbackContext context);
     }
 }

@@ -160,15 +160,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
-                },
-                {
-                    "name": "CloseMenu",
-                    "type": "Button",
-                    "id": "14469ef1-4569-4411-8e5f-4a28fcfee2fe",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -237,10 +228,27 @@
                     "action": "OpenInventory",
                     "isComposite": false,
                     "isPartOfComposite": false
-                },
+                }
+            ]
+        },
+        {
+            "name": "MenuActions",
+            "id": "02e8768d-1ebe-4f73-90f1-0fc355bf4723",
+            "actions": [
+                {
+                    "name": "CloseMenu",
+                    "type": "Button",
+                    "id": "b3f91a16-205b-473c-9b97-44b6415e6e97",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
                 {
                     "name": "",
-                    "id": "aff9dfbe-3827-47ed-8a0b-b3a7184f2c70",
+                    "id": "add0616d-47ff-464a-aa52-0dd4e139e533",
                     "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
@@ -251,7 +259,7 @@
                 },
                 {
                     "name": "",
-                    "id": "b087c20b-2628-434d-96b1-d1f608e1e4fd",
+                    "id": "ccca7332-b476-4504-9850-c1a55801db92",
                     "path": "<Gamepad>/buttonEast",
                     "interactions": "",
                     "processors": "",

@@ -12,6 +12,10 @@ public class InventoryButton : MonoBehaviour {
     Controls.Interactions.OpenInventory.performed += OpenInventory;
   }
 
+  void OnDisable () {
+    Controls.Interactions.OpenInventory.performed -= OpenInventory;
+  }
+
   public void OpenInventory (InputAction.CallbackContext ctx) {
     OpenInventory();
   }
