@@ -25,7 +25,7 @@ public class VisualState : MonoBehaviour {
   public void Dress (DressableData data) {
     if (slots == null) UpdateSkinTargets();
     foreach (ViewDefinition view in data.views) {
-      if (view.visualSlot == visualSlot) {
+      if (view.visualSlot == visualSlot && slots.ContainsKey(view.target)) {
         slots[view.target].displayTarget.sprite = view.skin;
       }
     }
@@ -41,6 +41,7 @@ public class VisualState : MonoBehaviour {
   }
 
   public void Remove () {
+    if (foundSlots == null) UpdateSkinTargets();
     foreach (SlotRenderer renderer in foundSlots) {
       renderer.displayTarget.sprite = null;
     }

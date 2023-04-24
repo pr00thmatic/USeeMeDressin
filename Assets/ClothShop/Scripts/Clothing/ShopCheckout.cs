@@ -5,6 +5,9 @@ using Clothing.UI;
 
 namespace Clothing {
 public class ShopCheckout : MonoBehaviour {
+  [Header("Configuration")]
+  public string resourcesPath = "Cloth/Regular";
+
   [Header("Initialization")]
   public ItemsForSale shopUI;
   public Interactive interactive;
@@ -19,6 +22,7 @@ public class ShopCheckout : MonoBehaviour {
 
   public void OpenShopUI () {
     shopUI.client = interactive.lastInteractor.gameObject;
+    shopUI.resourcesPath = resourcesPath;
     shopUI.gameObject.SetActive(true);
   }
 }
